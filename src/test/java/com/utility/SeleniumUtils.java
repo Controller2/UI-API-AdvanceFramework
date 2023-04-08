@@ -15,6 +15,12 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.auto.common.Visibility;
 
 public class SeleniumUtils {
 
@@ -100,6 +106,31 @@ public class SeleniumUtils {
 		driver.findElement(By.xpath(element)).isDisplayed();
 		
 	}
+	
+	public static void waitUntilVisibilityOfElement(String element,int time)
+	{
+		WebDriverWait wait = new WebDriverWait(DriverFactory.getInstance().getDriver(), Duration.ofSeconds(time));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element)));
+	}
+	
+	public static void waitUntilElementToBeClickable(String element,int time)
+	{
+		WebDriverWait wait = new WebDriverWait(DriverFactory.getInstance().getDriver(), Duration.ofSeconds(time));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(element)));
+	}
+	
+	public static void handleDropDownByIndex(String element,int index)
+	{
+		Select select = new Select((WebElement) By.xpath(element));
+		select.selectByIndex(index);
+	}
+	
+	public static void handleDropDownByVisibleText(WebElement element,String text)
+	{
+		Select select = new Select(element);
+		select.selectByVisibleText(text);
+	}
+
 
 
 

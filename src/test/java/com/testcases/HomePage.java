@@ -2,6 +2,7 @@ package com.testcases;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -43,6 +44,25 @@ public class HomePage extends TestBase {
 		try {
 			
 			SeleniumUtils.sendKeys(EnumXpathFactory.AMAZON_SEARCH_BOX.getValue(), "Office chairs",Keys.ENTER);
+		}
+
+
+		catch(Exception e)
+		{
+              
+		}
+
+
+	}
+	
+	
+	@Test(testName = "HomePage", description = "validating home page dropdown", groups = {"Regression","Phase1","Dropdown"})
+	public void handleDropDown()
+	{
+		try {
+			
+			SeleniumUtils.click(EnumXpathFactory.ALL_DROPDOWN.getValue());
+			SeleniumUtils.handleDropDownByIndex(EnumXpathFactory.ALL_DROPDOWN.getValue(), 1);
 		}
 
 
