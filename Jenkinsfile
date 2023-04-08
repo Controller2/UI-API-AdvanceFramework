@@ -1,21 +1,23 @@
 pipeline{
 
-agent any
+               agent any
 
-stages{
+                    stages{
 
-stage('compile stage'){
+                         stage('compile stage'){
 
-steps{
-withMaven(maven :'3.21')
-sh 'mvn test'
-}
-
-
-}
+                           steps{
+                                     withMaven(maven :'3.21')
+                                     sh 'mvn test'
+                               }
 
 
-}
+                                      }
+
+
+      }
+      
+      }
 
 
 

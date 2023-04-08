@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-UI_test" class="navigator-link ">
-                    <span>C:\Users\dell\eclipse-workspace\UI-API-Framework\ParallelTestingSuite.xml</span>
+                    <span>C:\Users\dell\git\UI-API-AdvanceFramework\ParallelTestingSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-UI_test" class="navigator-link ">
-                    <span>4 groups</span>
+                    <span>5 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,11 @@
                       <a href="#" panel-name="suite-UI_test" class="show-methods passed suite-UI_test"> (show)</a> <!-- show-methods passed suite-UI_test -->
                     </span>
                     <div class="method-list-content passed suite-UI_test">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-UI_test" title="com.testcases.HomePage" class="method navigator-link" hash-for-method="handleDropDown">handleDropDown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-UI_test" title="com.testcases.HomePage" class="method navigator-link" hash-for-method="validateHomePage">validateHomePage</a> <!-- method navigator-link -->
@@ -132,6 +137,15 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="handleDropDown">
+                  </a> <!-- handleDropDown -->
+                  <span class="method-name">handleDropDown</span>
+                  <em>
+(validating home page dropdown)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="validateHomePage">
                   </a> <!-- validateHomePage -->
                   <span class="method-name">validateHomePage</span>
@@ -153,7 +167,7 @@
         </div> <!-- panel UI_test -->
         <div panel-name="test-xml-UI_test" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dell\eclipse-workspace\UI-API-Framework\ParallelTestingSuite.xml</span>
+            <span class="header-content">C:\Users\dell\git\UI-API-AdvanceFramework\ParallelTestingSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -192,8 +206,20 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
+              <span class="test-group-name">Dropdown</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">handleDropDown</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">Phase1</span>
               <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">handleDropDown</span>
+                <br/>
+              </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">validateHomePage</span>
                 <br/>
@@ -206,6 +232,10 @@
             <div class="test-group">
               <span class="test-group-name">Regression</span>
               <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">handleDropDown</span>
+                <br/>
+              </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">validateHomePage</span>
                 <br/>
@@ -247,20 +277,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateHomePage2')
+data.setCell(0, 1, 'validateHomePage')
 data.setCell(0, 2, 'com.testcases.HomePage')
-data.setCell(0, 3, 13726);
+data.setCell(0, 3, 14173);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateHomePage')
+data.setCell(1, 1, 'validateHomePage2')
 data.setCell(1, 2, 'com.testcases.HomePage')
-data.setCell(1, 3, 11735);
+data.setCell(1, 3, 13485);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'handleDropDown')
+data.setCell(2, 2, 'com.testcases.HomePage')
+data.setCell(2, 3, 1034);
 window.suiteTableData['UI_test']= { tableData: data, tableDiv: 'times-div-UI_test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-UI_test">
               </div> <!-- times-div-UI_test -->
             </div> <!-- times-div -->
@@ -295,21 +329,33 @@ return data;
                 <span class="method-name">launchApplication(chrome, DEV_URL)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication(chrome, DEV_URL)</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">handleDropDown</span>
+                <span class="method-start">30516 ms</span>
+              </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateHomePage2</span>
-                <span class="method-start">21861 ms</span>
+                <span class="method-start">32793 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateHomePage</span>
-                <span class="method-start">21958 ms</span>
+                <span class="method-start">32819 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34518 ms</span>
+                <span class="method-start">36043 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">36273 ms</span>
+                <span class="method-start">47173 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">47911 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -8,7 +8,7 @@ public class ConfigReader {
 	
 	public static Properties propertiesObject() throws IOException
 	{
-		FileInputStream file = new FileInputStream("C:\\Users\\dell\\eclipse-workspace\\UI-API-Framework\\config-framework\\server.properties");
+		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"/config-framework/server.properties");
 		Properties read = new Properties();
 		read.load(file);
 		return read;

@@ -9,7 +9,8 @@ public enum EnumXpathFactory {
 	AMAZON_SEARCH_BOX("//input[@type='text']"),
 	CLICK_MOBILE_CATEGORY_OPTION("//a[normalize-space()='Mobiles']"),
 	CLICK_HELP_BUTTON_AT_BOTTOM("//a[normalize-space()='Help']"),
-	CLICK_BESTSELLER_BUTTON("//a[@href='/gp/bestsellers/?ref_=nav_cs_bestsellers']");
+	CLICK_BESTSELLER_BUTTON("//a[@href='/gp/bestsellers/?ref_=nav_cs_bestsellers']"),
+	ALL_DROPDOWN("//select[@id='searchDropdownBox']");
 	
 	
 	
